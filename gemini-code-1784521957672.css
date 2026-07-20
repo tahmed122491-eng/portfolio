@@ -1,0 +1,262 @@
+/* Design Tokens / Variables */
+:root {
+    --bg-color: #fafafa;
+    --card-bg: #ffffff;
+    --text-primary: #111111;
+    --text-muted: #555555;
+    --accent-color: #2c3e50; /* Deep elegant slate charcoal */
+    --border-color: #e5e5e5;
+    --max-width: 1040px;
+    --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Global Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-color);
+    font-family: var(--font-stack);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Navigation Layout */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(250, 250, 250, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-left: 2rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+.nav-links .btn-contact {
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-links .btn-contact:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+/* Main Layout Wrapper */
+.content-wrapper {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 4rem 0;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 4rem 0 2rem 0;
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 2.75rem;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+/* Split Grid Sections (Expertise & Credentials) */
+.grid-section, .timeline-section {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+}
+
+.section-label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.skill-card h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Experience / Timeline Section */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 1rem;
+}
+
+.time-meta h4 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.date-range {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.role-location {
+    font-weight: 500;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.time-content p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* Credentials Block Layout */
+.credentials-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.cred-type {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    background: var(--border-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.institution {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.academic-meta {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.cert-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cert-list li strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.cert-list li span {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* Footer Styling */
+.site-footer {
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    padding: 4rem 2rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    background: #ffffff;
+}
+
+.footer-email {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+/* Mobile Responsiveness Rules */
+@media (max-width: 768px) {
+    .grid-section, .timeline-section, .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .nav-links a {
+        margin-left: 1rem;
+    }
+}
